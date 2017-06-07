@@ -4,20 +4,25 @@ author: David Mawdsley, Robert Haines and Caroline Jay
 date: 28 June 2017
 autosize: true
 
+[](start with the question, “what’s the one thing I want people to learn, or feel, or do, as a result of hearing this?”. Tim Harford)
+
+[]()
+
 The problem
 ========================================================
 
 - The scholarly publication process is slow and lumpy
-- But scientific knowlege is incremental
+- But scientific knowledge is incremental
 	- And there are always more questions than there's time to answer
-- Can reproducible research help?
+- How can Docker and reproducible research help?
+
 
 Outline
 ========================================================
 
 - Background to reproducible research
 - Where Docker fits into this
-- 
+- Benefits, challenges and open questions 
 
 Reproducible Research
 ========================================================
@@ -29,10 +34,10 @@ Reproducible Research
 Reproducible Research in R
 ========================================================
 
-- `knitr` allows us to interleave markdown or LaTex with R code
+- `knitr` allows us to interleave markdown or `LaTeX` with `R` code
 	- R session persists throughout document
 		- Code chunks can be cached
-	- Supports other languages through engines - but no persistance between chunks
+	- Supports other languages -- but no persistence between chunks
 
 Reproducible != Reusable
 ========================================================
@@ -40,8 +45,8 @@ Reproducible != Reusable
 - Reproducibility is a good thing
 	- It makes you do things *properly*
 	- It lets others check your work
-- It doesn't (always) make it easy to _reuse_ or _extend_ your work 
-
+- It doesn't (necessarily) make it easy to _reuse_ or _extend_ your work 
+ ** repeatability too **
 
 Docker Pipelines for Reproducible, Reusable Research
 ========================================================
@@ -49,11 +54,34 @@ Docker Pipelines for Reproducible, Reusable Research
 - By breaking our analysis pipeline into sections we obtain a
 _more flexible_ workflow, which makes incremental improvement / extension of the work easier
 - Docker facilitates this
-- Use a Makefile to handle dependencies between "elements" (_better word needed??_)
-	- Makes the manuscript just another "element"
+- Use a Makefile to handle dependencies between "module" 
+	- Makes the manuscript just another "module"
 
+Example
+=======
 
+- Show diagram of manuscript workflow
+- Overlay Docker images, and languages used within them
 
+Docker images
+========================================================
+- Each module contains its own Makefile
+- Example:
+  - CppMT tracking
+  
+"Master" Makefile
+========================================================
+
+- Handles dependencies between the Docker image modules
+- Calls the final Docker image to produce manuscript
+
+Extent of reproducibility
+========================================================
+
+- At what stage do our data come into project?
+  - We chose to take the video files, and extracted depth frames
+  - Decision may be less clear-cut in other research domains
+  
 Challenges
 ========================================================
 
@@ -61,4 +89,18 @@ Challenges
 - Tying Docker and R together
 - More difficult than working non-reproducibility
    - A difficult sell?
-   
+   - Pre-prepared infrastructure?
+- Compiling the manuscript text outwith the process
+- Analysis vs results (i.e. analysis is the processing of, e.g. CppMT output)
+- User decisions in compilation process - i.e. setting bounding box 
+- Random numbers
+- Modules running in Docker containers are more difficult to debug/extract intermediate information from
+
+Benefits
+========================================================
+
+
+
+- Can work each element of the paper back to its source
+- Each module (Docker image) can be used independently of the others
+
