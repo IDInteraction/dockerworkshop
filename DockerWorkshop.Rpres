@@ -39,18 +39,17 @@ Reproducible Research in R
 	- R session persists throughout document
 		- Code chunks can be cached
 	- Supports other languages -- but no persistence between chunks
+  - Reproducible papers give the freedom to "dig" if you want; otherwise they look like a "normal" paper (and are no more reproducible).
 
 Reproducible Research in R (example)
 ========================================================
-
+`
 ```{r}
 x <- 1:10
 y <- x**2
-```
-```{r}
 plot(x,y)
 ```
-
+`
 
 
 
@@ -97,6 +96,26 @@ Extent of reproducibility
   - We chose to take the video files, and extracted depth frames
   - Decision may be less clear-cut in other research domains
   
+Extensible papers
+========================================================
+
+- Docker provides the containerisation which makes it easy to build the manuscript anywhere
+- Submit manuscript by inviting publisher to clone manuscript repository
+- Publisher `Make`s package and sends to reviewers
+- Reviewers review paper (and underlying code)
+- Article published; paper of record
+- Repository (sent to e.g. Figshare) is repository of record
+
+Extensible papers
+========================================================
+
+- Publisher has produced paper of record
+- Extensions (or corrections) to the paper can be built by:
+`git pull`
+`make`
+- VC and Makefile make it obvious what's changed ==> lighter weight peer review
+
+
 Challenges
 ========================================================
 
