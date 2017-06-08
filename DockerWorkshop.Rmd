@@ -1,7 +1,7 @@
 ---
 title: "Using Docker and Knitr to Create Reproducible and Extensible Publications"
-author: "David Mawdsley, Robert Haines and Caroline Jay"
-date: "28 June 2017"
+author: "David Mawdsley, Robert Haines and Caroline Jay<p>The University of Manchester</p>"
+date: "C4RR Workshop, Cambridge <p>28 June 2017</p>"
 output: 
   revealjs::revealjs_presentation:
     transition: fade
