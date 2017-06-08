@@ -1,2 +1,7 @@
 langauge: r
+cache: packages
+sudo: false
+
+install:
+- make
 
