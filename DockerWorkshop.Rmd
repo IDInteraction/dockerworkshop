@@ -1,16 +1,20 @@
 ---
 title: "Using Docker and Knitr to Create Reproducible and Extensible Publications"
-author: David Mawdsley, Robert Haines and Caroline Jay 
-date: 28 June 2017
-autosize: true
-output: revealjs::revealjs_presentation
+author: "David Mawdsley, Robert Haines and Caroline Jay"
+date: "28 June 2017"
+output: 
+  revealjs::revealjs_presentation:
+    transition: fade
+    theme: solarized
+    reveal_options:
+      controls: false
 ---
+
+## The problem
 
 [](start with the question, “what’s the one thing I want people to learn, or feel, or do, as a result of hearing this?”. Tim Harford)
 
 [](To understand why writing a reproducible paper is a good thing, and how to do it.)
-
-## The problem
 
 - The scholarly publication process is slow and lumpy
 - But scientific knowledge is incremental
@@ -40,13 +44,15 @@ output: revealjs::revealjs_presentation
   - Reproducible papers give the freedom to "dig" if you want; otherwise they look like a "normal" paper (and are no more reproducible).
 
 ## Reproducible Research in R (minimal example)
-`
+
 ```{r}
 x <- 1:10
 y <- x**2
+```
+
+```{r}
 plot(x,y)
 ```
-`
 
 ## Reproducible != Reusable
 
