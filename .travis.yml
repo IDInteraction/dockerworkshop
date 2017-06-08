@@ -3,7 +3,7 @@ cache: packages
 sudo: false
 
 install:
-        - Rscript -e "install.packages('rmarkdown')"
+        - Rscript -e "install.packages(c('rmarkdown', 'revealjs'))"
 script:
         - make
 

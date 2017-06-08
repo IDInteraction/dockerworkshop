@@ -3,7 +3,7 @@ title: "Using Docker and Knitr to Create Reproducible and Extensible Publication
 author: David Mawdsley, Robert Haines and Caroline Jay 
 date: 28 June 2017
 autosize: true
-output: ioslides_presentation
+output: slidy_presentation
 ---
 
 [](start with the question, “what’s the one thing I want people to learn, or feel, or do, as a result of hearing this?”. Tim Harford)
