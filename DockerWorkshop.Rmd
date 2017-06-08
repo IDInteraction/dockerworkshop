@@ -136,6 +136,6 @@ if(tausq.new < 2.0 * tausq.old) {
 
 ## An industrial Fabergé Egg?
 
-![eggquote](FabergeEggQuoteCropped.png)
+![](FabergeEggQuoteCropped.png)
 
 Bentley, J., Knuth, D., & McIlroy, D. (1986). Programming pearls. Communications of the ACM, 29(6), 471–483. https://doi.org/10.1145/5948.315654
