@@ -1,30 +1,29 @@
-Using Docker and Knitr to Create Reproducible and Extensible Publications
-========================================================
+---
+title: "Using Docker and Knitr to Create Reproducible and Extensible Publications"
 author: David Mawdsley, Robert Haines and Caroline Jay 
 date: 28 June 2017
 autosize: true
+output: ioslides_presentation
+---
 
 [](start with the question, “what’s the one thing I want people to learn, or feel, or do, as a result of hearing this?”. Tim Harford)
 
 [](To understand why writing a reproducible paper is a good thing, and how to do it.)
 
-The problem
-========================================================
+## The problem
 
 - The scholarly publication process is slow and lumpy
 - But scientific knowledge is incremental
 	- And there are always more questions than there's time to answer
 - How can Docker and reproducible research help?
 
-Outline
-========================================================
+## Outline
 
 - Background to reproducible research
 - Where Docker fits into this
 - Benefits, challenges and open questions 
 
-Reproducible Research
-========================================================
+## Reproducible Research
 
 - Knuth; literate programming
 - R "ecosystem"
@@ -32,8 +31,7 @@ Reproducible Research
 	- Complexity when we leave "`R`-land"
 
 
-Reproducible Research in R
-========================================================
+## Reproducible Research in R
 
 - `knitr` allows us to interleave markdown or `LaTeX` with `R` code
 	- R session persists throughout document
@@ -41,8 +39,7 @@ Reproducible Research in R
 	- Supports other languages -- but no persistence between chunks
   - Reproducible papers give the freedom to "dig" if you want; otherwise they look like a "normal" paper (and are no more reproducible).
 
-Reproducible Research in R (example)
-========================================================
+## Reproducible Research in R (minimal example)
 `
 ```{r}
 x <- 1:10
@@ -51,10 +48,7 @@ plot(x,y)
 ```
 `
 
-
-
-Reproducible != Reusable
-========================================================
+## Reproducible != Reusable
 
 - Reproducibility is a good thing
 	- It makes you do things *properly*
@@ -62,8 +56,7 @@ Reproducible != Reusable
 - It doesn't (necessarily) make it easy to _reuse_ or _extend_ your work 
  ** repeatability too **
 
-Docker Pipelines for Reproducible, Reusable Research
-========================================================
+## Docker Pipelines for Reproducible, Reusable Research
 
 - By breaking our analysis pipeline into sections we obtain a
 _more flexible_ workflow, which makes incremental improvement / extension of the work easier
@@ -71,33 +64,26 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 - Use a Makefile to handle dependencies between "module" 
 	- Makes the manuscript just another "module"
 
-Example
-=======
-
+## Example
 - Show diagram of manuscript workflow
 - Overlay Docker images, and languages used within them
 
-Docker images
-========================================================
+## Docker images
 - Each module contains its own Makefile
 - Example:
   - CppMT tracking
   
-"Master" Makefile
-========================================================
-
+## "Master" Makefile
 - Handles dependencies between the Docker image modules
 - Calls the final Docker image to produce manuscript
 
-Extent of reproducibility
-========================================================
+## Extent of reproducibility
 
 - At what stage do our data come into project?
   - We chose to take the video files, and extracted depth frames
   - Decision may be less clear-cut in other research domains
   
-Extensible papers
-========================================================
+## Extensible papers
 
 - Docker provides the containerisation which makes it easy to build the manuscript anywhere
 - Submit manuscript by inviting publisher to clone manuscript repository
@@ -106,8 +92,7 @@ Extensible papers
 - Article published; paper of record
 - Repository (sent to e.g. Figshare) is repository of record
 
-Extensible papers
-========================================================
+## Extensible papers
 
 - Publisher has produced paper of record
 - Extensions (or corrections) to the paper can be built by:
@@ -115,9 +100,19 @@ Extensible papers
 `make`
 - VC and Makefile make it obvious what's changed ==> lighter weight peer review
 
+## Tips
 
-Challenges
-========================================================
+- Test textual assertions with `R` code:
+
+> "The value of $\tau^2$ was at least twice its value under the previous model"
+
+```
+if(tausq.new < 2.0 * tausq.old) {
+  warning("Text assertion failed")
+}
+```
+
+## Challenges
 
 - Slow analyses
 - Tying Docker and R together
@@ -130,12 +125,17 @@ Challenges
 - Random numbers
 - Modules running in Docker containers are more difficult to debug/extract intermediate information from
 
-Benefits
-========================================================
+## Benefits
 
 - Can work each element of the paper back to its source
+- It makes fixing mistakes easier
 - Each module (Docker image) can be used independently of the others
+  - Reusability
 - Input directories to each module are mounted read only
 	- Guarantees data can't be overwitten
 
+## An industrial Fabergé Egg?
 
+![eggquote](FabergeEggQuoteCropped.png)
+
+Bentley, J., Knuth, D., & McIlroy, D. (1986). Programming pearls. Communications of the ACM, 29(6), 471–483. https://doi.org/10.1145/5948.315654
