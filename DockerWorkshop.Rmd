@@ -50,9 +50,6 @@ x <- 1:10
 y <- x**2
 ```
 
-```{r}
-plot(x,y)
-```
 
 ## Reproducible != Reusable
 
@@ -67,12 +64,20 @@ plot(x,y)
 - By breaking our analysis pipeline into sections we obtain a
 _more flexible_ workflow, which makes incremental improvement / extension of the work easier
 - Docker facilitates this
-- Use a Makefile to handle dependencies between "module" 
-	- Makes the manuscript just another "module"
+- Use a Makefile to handle dependencies between "modules" 
+	- Makes the manuscript just another "modules"
 
 ## Example
 - Show diagram of manuscript workflow
 - Overlay Docker images, and languages used within them
+
+---
+
+![](WorkflowPipeline.png)
+
+---
+
+![](WorkflowContainers.png)
 
 ## Docker images
 - Each module contains its own Makefile
@@ -145,3 +150,5 @@ if(tausq.new < 2.0 * tausq.old) {
 ![](FabergeEggQuoteCropped.png)
 
 Bentley, J., Knuth, D., & McIlroy, D. (1986). Programming pearls. Communications of the ACM, 29(6), 471–483. https://doi.org/10.1145/5948.315654
+
+
