@@ -18,7 +18,7 @@ output:
 
 - The scholarly publication process is slow and lumpy
 - But scientific knowledge is incremental
-	- And there are always more questions than there's time to answer
+	* And there are always more questions than there's time to answer
 - How can Docker and reproducible research help?
 
 ## Outline
@@ -31,17 +31,17 @@ output:
 
 - Knuth; literate programming
 - R "ecosystem"
-	- Reproducibility works well here
-	- Complexity when we leave "`R`-land"
+	* Reproducibility works well here
+	* Complexity when we leave "`R`-land"
 
 
 ## Reproducible Research in R
 
 - `knitr` allows us to interleave markdown or `LaTeX` with `R` code
-	- R session persists throughout document
+	* R session persists throughout document
 		- Code chunks can be cached
-	- Supports other languages -- but no persistence between chunks
-  - Reproducible papers give the freedom to "dig" if you want; otherwise they look like a "normal" paper (and are no more reproducible).
+	* Supports other languages -- but no persistence between chunks
+  * Reproducible papers give the freedom to "dig" if you want; otherwise they look like a "normal" paper (and are no more reproducible).
 
 ## Reproducible Research in R (minimal example)
 
@@ -54,8 +54,8 @@ y <- x**2
 ## Reproducible != Reusable
 
 - Reproducibility is a good thing
-	- It makes you do things *properly*
-	- It lets others check your work
+	* It makes you do things *properly*
+	* It lets others check your work
 - It doesn't (necessarily) make it easy to _reuse_ or _extend_ your work 
  ** repeatability too **
 
@@ -65,7 +65,7 @@ y <- x**2
 _more flexible_ workflow, which makes incremental improvement / extension of the work easier
 - Docker facilitates this
 - Use a Makefile to handle dependencies between "modules" 
-	- Makes the manuscript just another "modules"
+	* Makes the manuscript just another "modules"
 
 ## Example
 
@@ -80,7 +80,7 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 ## Docker images
 - Each module contains its own Makefile
 - Example:
-  - CppMT tracking
+  * CppMT tracking
   
   
 ---
@@ -95,8 +95,8 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 ## Extent of reproducibility
 
 - At what stage do our data come into project?
-  - We chose to take the video files, and extracted depth frames
-  - Decision may be less clear-cut in other research domains
+  * We chose to take the video files, and extracted depth frames
+  * Decision may be less clear-cut in other research domains
   
 ## Extensible papers
 
@@ -114,6 +114,14 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 `git pull`
 `make`
 - VC and Makefile make it obvious what's changed ==> lighter weight peer review
+
+## The paper as software
+
+- Treating the paper as "just another part" of the software development process lets us use:
+  * Version control
+  * Continuous integration
+  * Unit testing
+  
 
 ## Tips
 
@@ -133,8 +141,8 @@ if(tausq.new < 2.0 * tausq.old) {
 ## Challenges
 
 - More difficult than working non-reproducibility
-   - A difficult sell?
-   - Pre-prepared infrastructure?
+   * A difficult sell?
+   * Pre-prepared infrastructure?
 - Slow analyses
 - Tying Docker and R together
 - Compiling the manuscript text outwith the process
