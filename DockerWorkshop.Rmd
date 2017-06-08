@@ -68,8 +68,6 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 	- Makes the manuscript just another "modules"
 
 ## Example
-- Show diagram of manuscript workflow
-- Overlay Docker images, and languages used within them
 
 ---
 
@@ -83,6 +81,12 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 - Each module contains its own Makefile
 - Example:
   - CppMT tracking
+  
+  
+---
+
+![](ObjectTracking.png)
+
   
 ## "Master" Makefile
 - Handles dependencies between the Docker image modules
@@ -123,13 +127,16 @@ if(tausq.new < 2.0 * tausq.old) {
 }
 ```
 
+- Make intermediate files in modules "precious" 
+  - Avoids wasted work in slow modules
+
 ## Challenges
 
-- Slow analyses
-- Tying Docker and R together
 - More difficult than working non-reproducibility
    - A difficult sell?
    - Pre-prepared infrastructure?
+- Slow analyses
+- Tying Docker and R together
 - Compiling the manuscript text outwith the process
 - Analysis vs results (i.e. analysis is the processing of, e.g. CppMT output)
 - User decisions in compilation process - i.e. setting bounding box 
@@ -141,7 +148,7 @@ if(tausq.new < 2.0 * tausq.old) {
 - Can work each element of the paper back to its source
 - It makes fixing mistakes easier
 - Each module (Docker image) can be used independently of the others
-  - Reusability
+  - Reusability _and_ reproducibility
 - Input directories to each module are mounted read only
 	- Guarantees data can't be overwitten
 
