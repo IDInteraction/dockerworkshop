@@ -1,7 +1,8 @@
 language: r
 cache: packages
 sudo: false
-r_packages: rmarkdown
+r_packages: 
+- rmarkdown
 
 install:
 - make
