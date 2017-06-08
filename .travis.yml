@@ -1,8 +1,9 @@
 language: r
+cache: packages
 sudo: false
-before_install:
-        - Rscript -e "install.packages('rmarkdown')"
 
 install:
+        - Rscript -e "install.packages('rmarkdown')"
+script:
         - make
 
