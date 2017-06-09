@@ -138,9 +138,9 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 ## The paper as software
 
 - Treating the paper as "just another part" of the software development process lets us use:
-  * Version control
-  * Continuous integration
-  * Unit testing
+	* Version control
+	* Continuous integration
+	* Unit testing
   
 
 ## Tips
@@ -156,7 +156,7 @@ if(tausq.new < 2.0 * tausq.old) {
 ```
 
 - Make intermediate files in modules "precious" 
-  - Avoids wasted work in slow modules
+	* Avoids wasted work in slow modules
 
 ## Challenges
 
@@ -184,6 +184,6 @@ if(tausq.new < 2.0 * tausq.old) {
 
 ![](FabergeEggQuoteCropped.png)
 
-Bentley, J., Knuth, D., & McIlroy, D. (1986). Programming pearls. Communications of the ACM, 29(6), 471–483. https://doi.org/10.1145/5948.315654
+<h6><a href=https://doi.org/10.1145/5948.315654 >Bentley, J., Knuth, D., & McIlroy, D. (1986). Programming pearls. Communications of the ACM, 29(6), 471–483. </a></h6>
 
 
