@@ -157,7 +157,8 @@ if(tausq.new < 2.0 * tausq.old) {
 
 - Make intermediate files in modules "precious" 
 	* Avoids wasted work in slow modules
-
+- Make the Knitr paper runable on native system
+  	* Makes debugging easier
 ## Challenges
 
 - More difficult than working non-reproducibility
