@@ -29,11 +29,30 @@ output:
 
 ## Reproducible Research
 
-- Knuth; literate programming
-- R "ecosystem"
-	* Reproducibility works well here
-	* Complexity when we leave "`R`-land"
 
+![](https://upload.wikimedia.org/wikipedia/en/6/62/Literate_Programming_book_cover.jpg?download)
+
+<h6>Image:  <a href="//en.wikipedia.org/wiki/File:Literate_Programming_book_cover.jpg">Wikipedia</a></h6>
+
+---
+
+
+![](algoToPapers0.png)
+
+---
+
+![](algoToPapers1.png)
+
+---
+
+![](algoToPapers2.png)
+
+---
+
+
+![](algoToPapers3.png)
+
+---
 
 ## Reproducible Research in R
 
@@ -41,6 +60,7 @@ output:
 	* R session persists throughout document
 		- Code chunks can be cached
 	* Supports other languages -- but no persistence between chunks
+- 
   * Reproducible papers give the freedom to "dig" if you want; otherwise they look like a "normal" paper (and are no more reproducible).
 
 ## Reproducible Research in R (minimal example)
