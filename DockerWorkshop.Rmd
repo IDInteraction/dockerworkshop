@@ -60,10 +60,10 @@ output:
 	* R session persists throughout document
 		- Code chunks can be cached
 	* Supports other languages -- but no persistence between chunks
-- 
+ 
   * Reproducible papers give the freedom to "dig" if you want; otherwise they look like a "normal" paper (and are no more reproducible).
 
-## Reproducible Research in R (minimal example)
+## Reproducible Research in R (TODO minimal example)
 
 ```{r}
 x <- 1:10
@@ -120,6 +120,8 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
   
 ## Extensible papers
 
+- _TODO: Note similarity to ArXiv build process (though that's LaTeX only)_
+- _Publisher provides "manuscript" Docker image, author responsible for other Docker images?_
 - Docker provides the containerisation which makes it easy to build the manuscript anywhere
 - Submit manuscript by inviting publisher to clone manuscript repository
 - Publisher `Make`s package and sends to reviewers
@@ -134,6 +136,7 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 `git pull`
 `make`
 - VC and Makefile make it obvious what's changed ==> lighter weight peer review
+
 
 ## The paper as software
 
