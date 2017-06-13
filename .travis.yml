@@ -1,22 +1,23 @@
 language: r
 sudo: false
 
-#r_packages:
-#        - knitr
-#        - rmarkdown
-#        - revealjs
+r_packages:
+        - knitr
+        - rmarkdown
+        - revealjs
           
 install: 
         - echo "No install needed"
-        - Rscript -e "install.packages(c('knitr', 'rmarkdown', 'revealjs'))"
         - Rscript -e "installed.packages()"
 
 script:
         - make all
 
 before_deploy:
-        - rm .gitignore # So the presentation itself gets deployed
+        - ls
 
+after_deploy:
+        - ls
                
 deploy:
         skip_cleanup: true
