@@ -1,13 +1,14 @@
 language: r
 sudo: false
 
-r_packages:
-        - knitr
-        - rmarkdown
-        - revealjs
+#r_packages:
+#        - knitr
+#        - rmarkdown
+#        - revealjs
           
 install: 
         - echo "No install needed"
+        - Rscript -e "install.packages(c('knitr', 'rmarkdown', 'revealjs'))"
         - Rscript -e "installed.packages()"
 
 script:
