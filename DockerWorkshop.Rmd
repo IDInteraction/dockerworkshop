@@ -80,8 +80,8 @@ writeLines(readLines("ExamplePaper.Rnw"))
 - Reproducibility is a good thing
 	* It makes you do things *properly*
 	* It lets others check your work
+	* It lets others repeat your work
 - It doesn't (necessarily) make it easy to _reuse_ or _extend_ your work 
- ** repeatability too **
 
 ## Docker Pipelines for Reproducible, Reusable Research
 
@@ -103,8 +103,7 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 
 ## Docker images
 - Each module contains its own Makefile
-- Example:
-  * CppMT tracking
+- Example: CppMT tracking
   
   
 ---
@@ -112,7 +111,7 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 ![](ObjectTracking.png)
 
   
-## "Master" Makefile
+## Top-level Makefile
 - Handles dependencies between the Docker image modules
 - Calls the final Docker image to produce manuscript
 
