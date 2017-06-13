@@ -15,10 +15,8 @@ script:
         - make all
 
 before_deploy:
-        - ls
+        - rm .gitignore # So the presentation itself gets deployed
 
-after_deploy:
-        - ls
                
 deploy:
         skip_cleanup: true
