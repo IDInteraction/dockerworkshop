@@ -2,7 +2,7 @@
 
 all: DockerWorkshop.html
 
-DockerWorkshop.html: DockerWorkshop.Rmd *.png ExamplePaper.png
+DockerWorkshop.html: DockerWorkshop.Rmd *.png ExamplePaper.png ExamplePaperSource.png
 	Rscript -e "rmarkdown::render('$<')"
 
 present: DockerWorkshop.html
