@@ -83,6 +83,14 @@ writeLines(readLines("ExamplePaper.Rnw"))
 	* It lets others repeat your work
 - It doesn't (necessarily) make it easy to _reuse_ or _extend_ your work 
 
+## The future shape of academic research outputs
+
+- Should something like an academic paper be the "standard" research output?
+  * Is this better than, e.g. a Jupyter notebook? If so, why?
+    - Audience; who reads it and why?
+    - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notbooks vs journal articles
+- Rightly or wrongly academic papers are likely to be a primary means of scientific dissemination for a while
+
 ## Docker Pipelines for Reproducible, Reusable Research
 
 - By breaking our analysis pipeline into sections we obtain a
@@ -117,22 +125,11 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 
 ## Extensible papers
 
-- _TODO: Note similarity to ArXiv build process (though that's LaTeX only)_
-- _Publisher provides "manuscript" Docker image, author responsible for other Docker images?_
-- Docker provides the containerisation which makes it easy to build the manuscript anywhere
-- Submit manuscript by inviting publisher to clone manuscript repository
-- Publisher `Make`s package and sends to reviewers
-- Reviewers review paper (and underlying code)
-- Article published; paper of record
-- Repository (sent to e.g. Figshare) is repository of record
+- Modularity using Docker makes it easier to extend papers
+- Also allows paper to be built anywhere
+  - In principle allows the publisher/reviews to check manuscript _code_.
 
-## Extensible papers
-
-- Publisher has produced paper of record
-- Extensions (or corrections) to the paper can be built by:
-`git pull`
-`make`
-- VC and Makefile make it obvious what's changed ==> lighter weight peer review
+- Version control makes it obvious what's changed between versions/extensions ==> lighter weight peer review
 
 
 ## The paper as software
@@ -159,6 +156,7 @@ if(tausq.new < 2.0 * tausq.old) {
 	* Avoids wasted work in slow modules
 - Make the Knitr paper runable on native system
   	* Makes debugging easier
+
 ## Challenges
 
 - More difficult than working non-reproducibility
@@ -178,8 +176,7 @@ if(tausq.new < 2.0 * tausq.old) {
 - It makes fixing mistakes easier
 - Each module (Docker image) can be used independently of the others
   - Reusability _and_ reproducibility
-- Input directories to each module are mounted read only
-	- Guarantees data can't be overwitten
+- Could reshape publication process
 
 ## An industrial Fabergé Egg?
 
@@ -188,13 +185,6 @@ if(tausq.new < 2.0 * tausq.old) {
 <h6><a href=https://doi.org/10.1145/5948.315654 >Bentley, J., Knuth, D., & McIlroy, D. (1986). Programming pearls. Communications of the ACM, 29(6), 471–483. </a></h6>
 
 
-## The future shape of academic research outputs
-
-- Should something like an academic paper be the "standard" research output?
-  * Is this better than, e.g. a Jupyter notebook? If so, why?
-    - Audience; who reads it and why?
-    - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notbooks vs journal articles
-- Rightly or wrongly academic papers are likely to be a primary means of scientific dissemination for a while
 
 ## Bibliography/other reading
 
