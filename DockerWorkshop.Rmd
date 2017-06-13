@@ -64,9 +64,6 @@ output:
   * Can produce something that looks _identical_ to a "normal" paper
     	- Paper source needed for reproducibility
     	
----
-    	
-![](ExamplePaperSource.png)
 
 ---
 
