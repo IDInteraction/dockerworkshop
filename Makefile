@@ -1,6 +1,6 @@
 .PHONEY: present clean all
 
-all: DockerWorkshop.html
+all: DockerWorkshop.html ExamplePaper.pdf
 
 DockerWorkshop.html: DockerWorkshop.Rmd *.png ExamplePaper.png 
 	Rscript -e "rmarkdown::render('$<')"
