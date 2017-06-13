@@ -11,10 +11,13 @@ install:
 
 script:
         - make
+before_deploy:
+        - ls
 
+               
 deploy:
-        provider: pages
         skip_cleanup: true
+        provider: pages
         github_token: $GITHUB_TOKEN
         on:
                 branch: master
