@@ -3,6 +3,7 @@ cache: packages
 sudo: false
 
 r_packages:
+        - knitr
         - rmarkdown
         - revealjs
           
