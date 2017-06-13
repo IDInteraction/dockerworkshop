@@ -88,7 +88,7 @@ writeLines(readLines("ExamplePaper.Rnw"))
 - Should something like an academic paper be the "standard" research output?
   * Is this better than, e.g. a Jupyter notebook? If so, why?
     - Audience; who reads it and why?
-    - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notbooks vs journal articles
+    - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notebooks vs journal articles
 - Rightly or wrongly academic papers are likely to be a primary means of scientific dissemination for a while
 
 ## Docker Pipelines for Reproducible, Reusable Research
@@ -160,19 +160,18 @@ if(tausq.new < 2.0 * tausq.old) {
 ## Challenges
 
 - More difficult than working non-reproducibility
-   * A difficult sell?
-   * Pre-prepared infrastructure?
-- Slow analyses
-- Tying Docker and R together
-- Compiling the manuscript text outwith the process
+	* A difficult sell?
+	* Pre-prepared infrastructure?
+- Handling slow analyses
+- Working on the analysis interactively
+- Random numbers
+(will probably leave the ones below out - a bit problem specific)  
 - Analysis vs results (i.e. analysis is the processing of, e.g. CppMT output)
 - User decisions in compilation process - i.e. setting bounding box 
-- Random numbers
-- Modules running in Docker containers are more difficult to debug/extract intermediate information from
 
 ## Benefits
 
-- Can work each element of the paper back to its source
+- Can trace each figure in the paper back to its source
 - It makes fixing mistakes easier
 - Each module (Docker image) can be used independently of the others
   - Reusability _and_ reproducibility
@@ -188,7 +187,7 @@ if(tausq.new < 2.0 * tausq.old) {
 
 ## Bibliography/other reading
 
-* Gandrud, C. (2013). Reproducible Research with R and R Studio.
+* [Gandrud, C. (2013). Reproducible Research with R and R Studio.](https://raw.githubusercontent.com/IDInteraction/dockerworkshop/68621437a9d33e500e29324c5e2a86daca8fd061/.travis.yml)
 * [Lowndes, J. S. S., et al  (2017). Our path to better science in less time using open data science tools. Nature Ecology & Evolution, 1(6), 160.](https://doi.org/10.1038/s41559-017-0160)
 * [TechBlog: C. Titus Brown: Predicting the paper of the future, Nature Jobs (2017)](http://blogs.nature.com/naturejobs/2017/06/01/techblog-c-titus-brown-predicting-the-paper-of-the-future/)
 
