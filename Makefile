@@ -2,7 +2,7 @@
 
 all: DockerWorkshop.html
 
-DockerWorkshop.html: DockerWorkshop.Rmd *.png ExamplePaper.png ExamplePaperSource.png
+DockerWorkshop.html: DockerWorkshop.Rmd *.png ExamplePaper.png 
 	Rscript -e "rmarkdown::render('$<')"
 
 present: DockerWorkshop.html
@@ -24,9 +24,9 @@ ExamplePaper.pdf: ExamplePaper.tex
 	pdflatex $<
 
 
-ExamplePaperSource.png: ExamplePaperSource.ps
-	convert -density 150 $< -quality 90 $@
-
-ExamplePaperSource.ps: ExamplePaper.Rnw
-	a2ps -1 -o $@ $<
+#ExamplePaperSource.png: ExamplePaperSource.ps
+#	convert -density 150 $< -quality 90 $@
+#
+#ExamplePaperSource.ps: ExamplePaper.Rnw
+#	a2ps -1 -o $@ $<
 

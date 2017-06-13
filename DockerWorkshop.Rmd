@@ -70,6 +70,12 @@ output:
 
 ---
 
+```{r, echo=FALSE}
+writeLines(readLines("ExamplePaper.Rnw"))
+```
+
+---
+
 ![](ExamplePaper.png)
 
 ## Reproducible != Reusable
@@ -78,15 +84,7 @@ output:
 	* It makes you do things *properly*
 	* It lets others check your work
 - It doesn't (necessarily) make it easy to _reuse_ or _extend_ your work 
-
-
-## The future shape of academic research outputs
-
-- Should something like an academic paper be the "standard" research output?
-  * Is this better than, e.g. a Jupyter notebook? If so, why?
-    - Audience; who reads it and why?
-    - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notbooks vs journal articles
-- Rightly or wrongly academic papers are likely to be a primary means of scientific dissemination for a while
+ ** repeatability too **
 
 ## Docker Pipelines for Reproducible, Reusable Research
 
@@ -96,6 +94,7 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 - Use a Makefile to handle dependencies between "modules" 
 	* Makes the manuscript just another "modules"
 
+## Example
 
 ---
 
@@ -192,6 +191,14 @@ if(tausq.new < 2.0 * tausq.old) {
 
 <h6><a href=https://doi.org/10.1145/5948.315654 >Bentley, J., Knuth, D., & McIlroy, D. (1986). Programming pearls. Communications of the ACM, 29(6), 471–483. </a></h6>
 
+
+## The future shape of academic research outputs
+
+- Should something like an academic paper be the "standard" research output?
+  * Is this better than, e.g. a Jupyter notebook? If so, why?
+    - Audience; who reads it and why?
+    - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notbooks vs journal articles
+- Rightly or wrongly academic papers are likely to be a primary means of scientific dissemination for a while
 
 ## Bibliography/other reading
 

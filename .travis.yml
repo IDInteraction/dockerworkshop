@@ -1,15 +1,11 @@
 language: r
 cache: packages
-sudo: required
+sudo: false
 
 r_packages:
         - rmarkdown
         - revealjs
-        - knitr
           
-before_install:
-        - sudo apt-get -qq update
-        - sudo apt-get install -y a2ps        
 install: 
         - echo "No install needed"
 
