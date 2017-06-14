@@ -1,7 +1,7 @@
 ---
 title: "Using Docker and Knitr to Create Reproducible and Extensible Publications"
 author: "David Mawdsley, Robert Haines and Caroline Jay<p>The University of Manchester</p>"
-date: "C4RR Workshop, Cambridge <p>28 June 2017</p>"
+date: "C4RR Workshop, Cambridge. 28 June 2017<img src='http://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png' style='border:0px solid black'>"
 output: 
   revealjs::revealjs_presentation:
     transition: fade
@@ -14,7 +14,7 @@ output:
 
 [](start with the question, “what’s the one thing I want people to learn, or feel, or do, as a result of hearing this?”. Tim Harford)
 
-[](To understand why writing a reproducible paper is a good thing, and how it could alter the scholarly publication landscape.)
+[](To understand why writing a reproducible paper is a good thing, and that it follows naturally from containerising one's research.)
 
 - The scholarly publication process is slow and lumpy
 - But scientific knowledge is incremental
@@ -48,7 +48,6 @@ output:
 ![](algoToPapers2.png)
 
 ---
-
 
 ![](algoToPapers3.png)
 
@@ -97,7 +96,7 @@ writeLines(readLines("ExamplePaper.Rnw"))
 _more flexible_ workflow, which makes incremental improvement / extension of the work easier
 - Docker facilitates this
 - Use a Makefile to handle dependencies between "modules" 
-	* Makes the manuscript just another "modules"
+- The manuscript is then just another "module"
 
 ## Example
 
@@ -138,20 +137,11 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 	* Version control
 	* Continuous integration
 	* Unit testing
-  
+
 
 ## Tips
 
-- Test textual assertions with `R` code:
-
-> "The value of $\tau^2$ was at least twice its value under the previous model"
-
-```
-if(tausq.new < 2.0 * tausq.old) {
-  warning("Text assertion failed")
-}
-```
-
+- Test textual assertions with `R` code
 - Make intermediate files in modules "precious" 
 	* Avoids wasted work in slow modules
 - Make the Knitr paper runable on native system
@@ -159,25 +149,13 @@ if(tausq.new < 2.0 * tausq.old) {
 
 ## Challenges
 
-- More difficult than working non-reproducibility
-	* A difficult sell?
-	* Pre-prepared infrastructure?
-- Handling slow analyses
+- Extra overhead 
+  	* Minimised if working reproducibly from the outset
+	* Manuscript container could be shared
+	* Good "glue" to streamline workflow is important
 - Working on the analysis and manuscript interactively
-- Random numbers
 
->(will probably leave the ones below out - a bit problem specific)  
-
-- Analysis vs results (i.e. analysis is the processing of, e.g. CppMT output)
-- User decisions in compilation process - i.e. setting bounding box 
-
-## Benefits
-
-- Each module (Docker image) can be used independently of the others
-  - Reusability _and_ reproducibility
-- Can trace each figure in the paper back to its source
-- Paper is self consistent
-- Could reshape publication process
+Challenges are minimised if you research reproducibly from the start - all you need is the "glue"
 
 ## An industrial Fabergé Egg?
 
@@ -186,10 +164,19 @@ if(tausq.new < 2.0 * tausq.old) {
 <h6><a href=https://doi.org/10.1145/5948.315654 >Bentley, J., Knuth, D., & McIlroy, D. (1986). Programming pearls. Communications of the ACM, 29(6), 471–483. </a></h6>
 
 
+## Benefits
 
-## Bibliography/other reading
+- Each module (Docker image) can be used independently of the others
+  - Reusability _and_ reproducibility
+- Can trace each figure in the paper back to its source
+- Can _fully_ understand methodology
+- Paper is self consistent
+- Could reshape publication process
+
+## Bibliography/further reading
 
 * [Gandrud, C. (2013). Reproducible Research with R and R Studio.](https://raw.githubusercontent.com/IDInteraction/dockerworkshop/68621437a9d33e500e29324c5e2a86daca8fd061/.travis.yml)
 * [Lowndes, J. S. S., et al  (2017). Our path to better science in less time using open data science tools. Nature Ecology & Evolution, 1(6), 160.](https://doi.org/10.1038/s41559-017-0160)
 * [TechBlog: C. Titus Brown: Predicting the paper of the future, Nature Jobs (2017)](http://blogs.nature.com/naturejobs/2017/06/01/techblog-c-titus-brown-predicting-the-paper-of-the-future/)
+* [Xie, Y. (2015) Dynamic Documents with R and knitr. 2nd ed. Chapman and Hall/CRC](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr-Second-Edition/Xie/p/book/9781498716963)
 
