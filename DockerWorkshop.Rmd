@@ -155,7 +155,7 @@ if(tausq.new < 2.0 * tausq.old) {
 - Make intermediate files in modules "precious" 
 	* Avoids wasted work in slow modules
 - Make the Knitr paper runable on native system
-  	* Makes debugging easier
+  	* Allows interactive writing / analysis
 
 ## Challenges
 
@@ -163,18 +163,20 @@ if(tausq.new < 2.0 * tausq.old) {
 	* A difficult sell?
 	* Pre-prepared infrastructure?
 - Handling slow analyses
-- Working on the analysis interactively
+- Working on the analysis and manuscript interactively
 - Random numbers
-(will probably leave the ones below out - a bit problem specific)  
+
+>(will probably leave the ones below out - a bit problem specific)  
+
 - Analysis vs results (i.e. analysis is the processing of, e.g. CppMT output)
 - User decisions in compilation process - i.e. setting bounding box 
 
 ## Benefits
 
-- Can trace each figure in the paper back to its source
-- It makes fixing mistakes easier
 - Each module (Docker image) can be used independently of the others
   - Reusability _and_ reproducibility
+- Can trace each figure in the paper back to its source
+- Paper is self consistent
 - Could reshape publication process
 
 ## An industrial Fabergé Egg?
