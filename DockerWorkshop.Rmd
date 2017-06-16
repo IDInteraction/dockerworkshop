@@ -154,6 +154,8 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 	* Manuscript container could be shared
 	* Good "glue" to streamline workflow is important
 - Working on the analysis and manuscript interactively
+	* Working offline
+- Dealing with publishers' arcane requirements
 
 Challenges are minimised if you research reproducibly from the start - all you need is the "glue"
 
