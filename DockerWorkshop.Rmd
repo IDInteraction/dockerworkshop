@@ -94,6 +94,8 @@ writeLines(readLines("ExamplePaper.Rnw"))
   * Is this better than, e.g. a Jupyter notebook? If so, why?
     - Audience; who reads it and why?
     - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notebooks vs journal articles
+
+
 - It seems likely that academic papers will be the primary means of scientific dissemination / credit for a while
 
 ## Docker Pipelines for Reproducible, Reusable Research
@@ -159,8 +161,7 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
   	* Minimised if working reproducibly from the outset
 	* Manuscript container could be shared
 	* Good "glue" to streamline workflow is important
-- Working on the analysis and manuscript interactively
-	* Working offline
+- Working offline / collaboratively (e.g. Overleaf)
 
 Challenges are minimised if you research reproducibly from the start - all you need is the "glue"
 
