@@ -63,8 +63,6 @@ output:
 
 - `knitr` allows us to interleave markdown or `LaTeX` with `R` code
 	* R session persists throughout document
-		- Code chunks can be cached
-	* Supports other languages -- but no persistence between chunks
  
   * Can produce something that looks _identical_ to a "normal" paper
     	- Paper source needed for reproducibility
@@ -101,7 +99,8 @@ writeLines(readLines("ExamplePaper.Rnw"))
 ## Docker Pipelines for Reproducible, Reusable Research
 
 - By breaking our analysis pipeline into sections we obtain a
-_more flexible_ workflow, which makes incremental improvement / extension of the work easier
+_more flexible_ and modular workflow.
+	* makes incremental improvement / extension of the work easier
 - Docker facilitates this
 - Use a Makefile to handle dependencies between "modules" 
 - The manuscript is then just another "module"
