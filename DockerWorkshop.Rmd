@@ -72,7 +72,7 @@ output:
 
 ---
 
-```{r, echo=FALSE,  comment=NA}
+```{r, echo=FALSE,  comment=NA, highlight=TRUE}
 writeLines(readLines("ExamplePaper.Rnw"))
 ```
 
@@ -185,6 +185,6 @@ Challenges are minimised if you research reproducibly from the start - all you n
 
 * [Gandrud, C. (2013). Reproducible Research with R and R Studio.](https://raw.githubusercontent.com/IDInteraction/dockerworkshop/68621437a9d33e500e29324c5e2a86daca8fd061/.travis.yml)
 * [Lowndes, J. S. S., et al  (2017). Our path to better science in less time using open data science tools. Nature Ecology & Evolution, 1(6), 160.](https://doi.org/10.1038/s41559-017-0160)
-* [TechBlog: C. Titus Brown: Predicting the paper of the future, Nature Jobs (2017)](http://blogs.nature.com/naturejobs/2017/06/01/techblog-c-titus-brown-predicting-the-paper-of-the-future/)
+* [Titus Brown, C. (2017) : Predicting the paper of the future. TechBlog: C, Nature Jobs (Interview with Perkel, J)](http://blogs.nature.com/naturejobs/2017/06/01/techblog-c-titus-brown-predicting-the-paper-of-the-future/)
 * [Xie, Y. (2015) Dynamic Documents with R and knitr. 2nd ed. Chapman and Hall/CRC](https://www.crcpress.com/Dynamic-Documents-with-R-and-knitr-Second-Edition/Xie/p/book/9781498716963)
 
