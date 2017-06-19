@@ -1,13 +1,15 @@
 ---
 title: "Using Docker and Knitr to Create Reproducible and Extensible Publications"
 author: "David Mawdsley, Robert Haines and Caroline Jay<p>The University of Manchester</p>"
-date: "C4RR Workshop, Cambridge. 28 June 2017<img src='http://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png' style='border:0px solid black'>"
+date: "C4RR Workshop, Cambridge. 28 June 2017<img src='http://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png' style='border:0px solid black' width='50%'>"
 output: 
   revealjs::revealjs_presentation:
     transition: fade
+    self_contained: true
     theme: solarized
     reveal_options:
       controls: false
+      slideNumber: true
 ---
 
 ## The problem
@@ -34,6 +36,8 @@ output:
 
 <h6>Image:  <a href="//en.wikipedia.org/wiki/File:Literate_Programming_book_cover.jpg">Wikipedia</a></h6>
 
+
+[](1984.  Very much focussed on _programming_.  Literate data analysis may be a better name for what we're trying to do. ) 
 ---
 
 
@@ -50,6 +54,8 @@ output:
 ---
 
 ![](algoToPapers3.png)
+
+[](Jupyter notebooks look like Jupyter notebooks - we're making something that looks like a regular paper)
 
 ---
 
@@ -88,7 +94,7 @@ writeLines(readLines("ExamplePaper.Rnw"))
   * Is this better than, e.g. a Jupyter notebook? If so, why?
     - Audience; who reads it and why?
     - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notebooks vs journal articles
-- Rightly or wrongly academic papers are likely to be a primary means of scientific dissemination for a while
+- It seems likely that academic papers will be the primary means of scientific dissemination / credit for a while
 
 ## Docker Pipelines for Reproducible, Reusable Research
 
@@ -128,7 +134,7 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 - Also allows paper to be built anywhere
   - In principle allows the publisher/reviews to check manuscript _code_.
 
-- Version control makes it obvious what's changed between versions/extensions ==> lighter weight peer review
+- Version control makes it obvious what's changed between versions/extensions &#8594; lighter weight peer review
 
 
 ## The paper as software
@@ -155,7 +161,6 @@ _more flexible_ workflow, which makes incremental improvement / extension of the
 	* Good "glue" to streamline workflow is important
 - Working on the analysis and manuscript interactively
 	* Working offline
-- Dealing with publishers' arcane requirements
 
 Challenges are minimised if you research reproducibly from the start - all you need is the "glue"
 
@@ -169,7 +174,7 @@ Challenges are minimised if you research reproducibly from the start - all you n
 ## Benefits
 
 - Each module (Docker image) can be used independently of the others
-  - Reusability _and_ reproducibility
+  - Re-usability _and_ reproducibility
 - Can trace each figure in the paper back to its source
 - Can _fully_ understand methodology
 - Paper is self consistent
