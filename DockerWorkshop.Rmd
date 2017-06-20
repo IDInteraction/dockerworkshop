@@ -14,9 +14,7 @@ output:
 
 ## The problem
 
-[](start with the question, “what’s the one thing I want people to learn, or feel, or do, as a result of hearing this?”. Tim Harford)
-
-[](To understand why writing a reproducible paper is a good thing, and that it follows naturally from containerising one's research.)
+[](Talk aim: To understand why writing a reproducible paper is a good thing, and that it follows naturally from containerising one's research.)
 
 - The scholarly publication process is slow and lumpy
 - But scientific knowledge is incremental
