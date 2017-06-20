@@ -27,7 +27,7 @@ output:
 
 - Background to reproducible research
 - Where Docker fits into this
-- Benefits, challenges and open questions 
+- Benefits and challenges 
 
 ## Reproducible Research
 
@@ -55,7 +55,7 @@ output:
 
 ![](algoToPapers3.png)
 
-[](Jupyter notebooks look like Jupyter notebooks - we're making something that looks like a regular paper)
+[](Jupyter notebooks look like Jupyter notebooks - we're making something that looks like a regular paper.  But can make something that looks like a Notebook)
 
 ---
 
@@ -64,8 +64,11 @@ output:
 - `knitr` allows us to interleave markdown or `LaTeX` with `R` code
 	* R session persists throughout document
  
-  * Can produce something that looks _identical_ to a "normal" paper
-    	- Paper source needed for reproducibility
+- Can produce something that looks _identical_ to a "normal" paper
+	* Paper source needed for reproducibility
+
+[](Fits in well with existing publication practices - provided you can submit in LaTeX)
+
     	
 
 ---
@@ -74,9 +77,12 @@ output:
 writeLines(readLines("ExamplePaper.Rnw"))
 ```
 
+[](Example reproducible paper - loads example data set, does regression, plots results, extracts figure.  Standard LaTeX template, but could use anything.
 ---
 
 ![](ExamplePaper.png)
+
+[](Paper is produced reproducibly within presentation)
 
 ## Reproducible != Reusable
 
@@ -85,6 +91,7 @@ writeLines(readLines("ExamplePaper.Rnw"))
 	* It lets others check your work
 	* It lets others repeat your work
 - It doesn't (necessarily) make it easy to _reuse_ or _extend_ your work 
+
 
 ## The future shape of academic research outputs
 
@@ -95,6 +102,8 @@ writeLines(readLines("ExamplePaper.Rnw"))
 
 
 - It seems likely that academic papers will be the primary means of scientific dissemination / credit for a while
+
+[](This slide is an aside - but worth thinking about the issues)
 
 ## Docker Pipelines for Reproducible, Reusable Research
 
@@ -111,13 +120,14 @@ _more flexible_ and modular workflow.
 
 ![](WorkflowPipeline.png)
 
+[](Discuss aim of experiment, data source, processing workflow)
 ---
 
 ![](WorkflowContainers.png)
 
 ## Docker images
 - Each module contains its own Makefile
-- Example: CppMT tracking
+- Example: object tracking
   
   
 ---
@@ -133,7 +143,7 @@ _more flexible_ and modular workflow.
 
 - Modularity using Docker makes it easier to extend papers
 - Also allows paper to be built anywhere
-  - In principle allows the publisher/reviews to check manuscript _code_.
+  - In principle allows the publisher/reviewers to check manuscript code
 
 - Version control makes it obvious what's changed between versions/extensions &#8594; lighter weight peer review
 
@@ -154,6 +164,8 @@ _more flexible_ and modular workflow.
 - Make the Knitr paper runable on native system
   	* Allows interactive writing / analysis
 
+
+
 ## Challenges
 
 - Extra overhead 
@@ -162,7 +174,10 @@ _more flexible_ and modular workflow.
 	* Good "glue" to streamline workflow is important
 - Working offline / collaboratively (e.g. Overleaf)
 
+
 Challenges are minimised if you research reproducibly from the start - all you need is the "glue"
+
+[](Is the engineering worth it?  Not a recent issue..)
 
 ## An industrial Fabergé Egg?
 
@@ -176,9 +191,10 @@ Challenges are minimised if you research reproducibly from the start - all you n
 - Each module (Docker image) can be used independently of the others
   - Re-usability _and_ reproducibility
 - Can trace each figure in the paper back to its source
-- Can _fully_ understand methodology
+- Readers can _fully_ understand methodology
 - Paper is self consistent
 - Could reshape publication process
+
 
 ## Bibliography/further reading
 
