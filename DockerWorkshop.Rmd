@@ -5,6 +5,7 @@ date: "C4RR Workshop, Cambridge. 28 June 2017<img src='http://assets.manchester.
 output: 
   revealjs::revealjs_presentation:
     transition: fade
+    fig_height: 6
     self_contained: true
     theme: solarized
     reveal_options:
@@ -20,6 +21,8 @@ output:
 - But scientific knowledge is incremental
 	* And there are always more questions than there's time to answer
 - How can Docker and reproducible research help?
+
+[](Pipeline makes it easier to ask new questions of your data.)
 
 ## Outline
 
@@ -115,6 +118,11 @@ _more flexible_ and modular workflow.
 - The manuscript is then just another "module"
 
 ## Example
+
+- IDInteraction project
+- Automate the coding of behaviours
+
+![](P07ScreenTablet.jpg) 
 
 ---
 
