@@ -75,7 +75,10 @@ output:
 writeLines(readLines("ExamplePaper.Rnw"))
 ```
 
-[](Example reproducible paper - loads example data set, does regression, plots results, extracts figure.  Standard LaTeX template, but could use anything.
+
+
+[](Example reproducible paper - loads example data set, does regression, plots results, extracts figure.  Standard LaTeX template, but could use anything.)
+
 ---
 
 ![](ExamplePaper.png)
@@ -97,7 +100,6 @@ writeLines(readLines("ExamplePaper.Rnw"))
   * Is this better than, e.g. a Jupyter notebook? If so, why?
     - Audience; who reads it and why?
     - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notebooks vs journal articles
-
 
 - It seems likely that academic papers will be the primary means of scientific dissemination / credit for a while
 
