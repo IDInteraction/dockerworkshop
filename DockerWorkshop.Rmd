@@ -5,6 +5,7 @@ date: "C4RR Workshop, Cambridge. 27 June 2017<img src='http://assets.manchester.
 output: 
   revealjs::revealjs_presentation:
     transition: fade
+    theme: solarize
     fig_height: 6
     self_contained: true
     reveal_options:
