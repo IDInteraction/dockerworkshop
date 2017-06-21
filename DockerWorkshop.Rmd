@@ -97,16 +97,6 @@ writeLines(readLines("ExamplePaper.Rnw"))
 - It doesn't (necessarily) make it easy to _reuse_ or _extend_ your work 
 
 
-## The future shape of academic research outputs
-
-- Should something like an academic paper be the "standard" research output?
-  * Is this better than, e.g. a Jupyter notebook? If so, why?
-    - Audience; who reads it and why?
-    - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notebooks vs journal articles
-
-- It seems likely that academic papers will be the primary means of scientific dissemination / credit for a while
-
-[](This slide is an aside - but worth thinking about the issues)
 
 ## Docker Pipelines for Reproducible, Reusable Research
 
@@ -197,6 +187,16 @@ Challenges are minimised if you research reproducibly from the start - all you n
 - Paper is self consistent
 - Could reshape publication process
 
+## The future of academic research outputs
+
+- Should something like an academic paper be the "standard" research output?
+  * Is this better than, e.g. a Jupyter notebook? If so, why?
+    - Audience; who reads it and why?
+    - Researcher evaluation/assessment; cultural shift, relative (perceived) values of, e.g. notebooks vs journal articles
+
+- It seems likely that academic papers will be the primary means of scientific dissemination / credit for a while
+
+[](This slide is an aside - but worth thinking about the issues)
 
 ## Bibliography/further reading
 
