@@ -179,13 +179,6 @@ Challenges are minimised if you research reproducibly from the start - all you n
 
 [](Is the engineering worth it?  Not a recent issue..)
 
-## An industrial Fabergé Egg?
-
-![](FabergeEggQuoteCropped.png)
-
-<h6><a href=https://doi.org/10.1145/5948.315654 >Bentley, J., Knuth, D., & McIlroy, D. (1986). Programming pearls. Communications of the ACM, 29(6), 471–483. </a></h6>
-
-
 ## Benefits
 
 - Each module (Docker image) can be used independently of the others
