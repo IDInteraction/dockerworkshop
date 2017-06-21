@@ -115,7 +115,8 @@ _more flexible_ and modular workflow.
 	* makes incremental improvement / extension of the work easier
 - Docker facilitates this
 - Use a Makefile to handle dependencies between "modules" 
-- The manuscript is then just another "module"
+- The manuscript is part of the analysis pipeline
+  	* just another "module"
 
 ## Example
 
@@ -128,19 +129,19 @@ _more flexible_ and modular workflow.
 
 ![](WorkflowPipeline.png)
 
-[](Discuss aim of experiment, data source, processing workflow)
 ---
-
-![](WorkflowContainers.png)
 
 ## Docker images
 - Each module contains its own Makefile
 - Example: object tracking
-  
-  
----
+   
+[](Discuss aim of experiment, data source, processing workflow)
 
 ![](ObjectTracking.png)
+
+---
+
+![](WorkflowContainers.png)
 
   
 ## Top-level Makefile
