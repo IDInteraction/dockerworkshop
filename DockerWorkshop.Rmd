@@ -10,7 +10,6 @@ output:
     self_contained: true
     reveal_options:
       controls: false
-      slideNumber: true
 ---
 
 ## The problem
