@@ -5,7 +5,11 @@ sudo: required
 #        - knitr
 #        - rmarkdown
 #        - revealjs
-          
+
+before_install:
+        - sudo apt-get -qq update
+        - sudo apt-get install -y a2ps ghostscript
+
 install: 
         - echo "No install needed"
         - Rscript -e "install.packages(c('knitr', 'rmarkdown', 'revealjs'))"

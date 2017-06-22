@@ -76,10 +76,7 @@ output:
     	
 ---
 
-```{r, echo=FALSE,  comment=NA, highlight=TRUE}
-writeLines(readLines("ExamplePaper.Rnw"))
-```
-
+![](ExamplePaperSource.png)
 
 
 [](Example reproducible paper - loads example data set, does regression, plots results, extracts figure.  Standard LaTeX template, but could use anything. This *is* the paper, built using Travis CI)
