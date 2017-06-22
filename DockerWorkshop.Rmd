@@ -44,19 +44,19 @@ output:
 
 ![](algoToPapers0.png)
 
----
+## {data-transition="none"}
 
 ![](algoToPapers1.png)
 
----
+## {data-transition="none"}
 
 ![](algoToPapers2.png)
 
----
+## {data-transition="none"}
 
 ![](algoToPapers3.png)
 
----
+## {data-transition="none"}
 
 ![](algoToPapers4.png)
 
@@ -95,8 +95,6 @@ output:
 	* It lets others repeat your work
 - It doesn't (necessarily) make it easy to _reuse_ or _extend_ your work 
 
-
-
 ## Docker Pipelines for Reproducible, Reusable Research
 
 - By breaking our analysis pipeline into sections we obtain a
@@ -118,7 +116,6 @@ _more flexible_ and modular workflow.
 
 ![](WorkflowPipeline.png)
 
----
 
 ## Docker images
 - Each module contains its own Makefile
@@ -126,9 +123,26 @@ _more flexible_ and modular workflow.
    
 [](Discuss aim of experiment, data source, processing workflow)
 
-![](ObjectTracking.png)
+![](ObjectTracking0.png)
 
----
+
+## Docker images {data-transition="none"}
+- Each module contains its own Makefile
+- Example: object tracking
+   
+[](Discuss aim of experiment, data source, processing workflow)
+
+![](ObjectTracking1.png)
+
+## Docker images {data-transition="none"}
+
+- Each module contains its own Makefile
+- Example: object tracking
+   
+
+![](ObjectTracking2.png)
+
+##
 
 ![](WorkflowContainers.png)
 
