@@ -192,7 +192,6 @@ _more flexible_ and modular workflow.
 
 Challenges are minimised if you research reproducibly from the start - all you need is the "glue"
 
-[](Is the engineering worth it?  Not a recent issue..)
 
 ## Benefits
 
@@ -212,7 +211,16 @@ Challenges are minimised if you research reproducibly from the start - all you n
 
 - It seems likely that academic papers will be the primary means of scientific dissemination / credit for a while
 
-[](This slide is an aside - but worth thinking about the issues)
+## Conclusions
+
+- Knitr makes writing a reproducible paper within R easy
+- Docker makes the paper
+  * Extensible
+	* Makes the analysis pipeline repurposable
+- Extra work minimised if process embedded from the outset
+
+
+
 
 ## Bibliography/further reading
 
