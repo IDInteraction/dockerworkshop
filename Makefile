@@ -1,14 +1,13 @@
 .PHONEY: present clean all
 all: DockerWorkshop.html 
-images := $(wildcard *.png)
-DockerWorkshop.html: DockerWorkshop.Rmd $(images)
+DockerWorkshop.html: DockerWorkshop.Rmd ExamplePaper.png ExamplePaperSource.png
 	Rscript -e "rmarkdown::render('$<')"
 
 present: DockerWorkshop.html
 	chromium-browser $< &
 
 clean:
-	rm DockerWorkshop.html
+	rm -f DockerWorkshop.html ExamplePaper.pdf ExamplePaper.png ExamplePaperSource.png
 
 ExamplePaper.png: ExamplePaper.pdf
 	convert -density 150 $< -quality 90 $@
@@ -27,5 +26,5 @@ ExamplePaperSource.png: ExamplePaperSource.ps
 	convert -density 150 $< -quality 90 $@
 
 ExamplePaperSource.ps: ExamplePaper.Rnw
-	a2ps -1 -o $@ $<
+	a2ps -1 -f 14 --highlight-level=heavy -o $@ $<
 
