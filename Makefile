@@ -1,5 +1,7 @@
 .PHONEY: present clean all
+
 all: DockerWorkshop.html 
+
 DockerWorkshop.html: DockerWorkshop.Rmd ExamplePaper.png ExamplePaperSource.png
 	Rscript -e "rmarkdown::render('$<')"
 
@@ -20,7 +22,6 @@ ExamplePaper.pdf: ExamplePaper.tex
 	pdflatex $<
 	# Run twice for xref
 	pdflatex $<
-
 
 ExamplePaperSource.png: ExamplePaperSource.ps
 	convert -density 150 $< -quality 90 $@
