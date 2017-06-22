@@ -74,14 +74,14 @@ output:
 
 [](Fits in well with existing publication practices - provided you can submit in LaTeX)
     	
----
+## {data-transition="concave-out"}
 
 ![](ExamplePaperSource.png)
 
 
 [](Example reproducible paper - loads example data set, does regression, plots results, extracts figure.  Standard LaTeX template, but could use anything. This *is* the paper, built using Travis CI)
 
----
+## {data-transition="concave-in fade-out"}
 
 ![](ExamplePaper.png)
 
