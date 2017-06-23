@@ -173,11 +173,18 @@ _more flexible_ and modular workflow.
 
 ## Recommendations
 
-- Test textual assertions with `R` code
 - Keep intermediate analysis steps
 	* Avoids wasted work in slow modules
 - Make the Knitr paper runable on native system
   	* Allows interactive writing / analysis
+- Test textual assertions with `R` code:
+
+> "The accuracy doubled when we used the new procedure"
+
+```
+if(acc.new < 2*acc.old)
+	warning("Accuracy assertion failed")
+```
 
 
 
