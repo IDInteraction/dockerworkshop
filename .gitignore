@@ -1,0 +1,17 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*~
+*-figure/
+*.swp
+*.log
+*.pdf
+ExamplePaper.png
+ExamplePaper.ps
+ExamplePaper.tex
+ExamplePaperSource.*
+*-concordance.tex
+*.aux
+ExamplePaper.R
+
