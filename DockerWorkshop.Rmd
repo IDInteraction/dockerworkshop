@@ -221,8 +221,8 @@ Challenges are minimised if you research reproducibly from the start - all you n
 ## Conclusions
 
 - Knitr makes writing a reproducible paper within R easy
-- Docker makes the paper
-  * Extensible
+  	* Complexity comes from leaving R ecosystem
+- Docker reduces this complexity and makes the paper extensible
 	* Makes the analysis pipeline repurposable
 - Extra work minimised if process embedded from the outset
 
