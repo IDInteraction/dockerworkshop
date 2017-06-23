@@ -104,10 +104,10 @@ _more flexible_ and modular workflow.
 - The manuscript is part of the analysis pipeline
   	* just another "module"
 
-## Example
+## Example - IDInteraction
 
-- IDInteraction project
 - Automate the coding of behaviours
+- This is _really_ slow and tedious to do by hand.
 
 ![](P07ScreenTablet.jpg) 
 
